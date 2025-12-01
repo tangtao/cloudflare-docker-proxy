@@ -2,6 +2,17 @@ name = "cloudflare-docker-proxy"
 main = "src/index.js"
 compatibility_date = "2023-12-01"
 
+routes = [
+  { pattern = "docker.tangtao.name/*", custom_domain = true },
+  { pattern = "quay.tangtao.name/*", custom_domain = true },
+  { pattern = "gcr.tangtao.name/*", custom_domain = true },
+  { pattern = "k8s-gcr.tangtao.name/*", custom_domain = true },
+  { pattern = "k8s.tangtao.name/*", custom_domain = true },
+  { pattern = "ghcr.tangtao.name/*", custom_domain = true },
+  { pattern = "cloudsmith.tangtao.name/*", custom_domain = true },
+]
+
+
 [dev]
 ip = "0.0.0.0"
 port = 8787
